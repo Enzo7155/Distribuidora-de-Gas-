@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Distribuidora de Gas El Volcán - Proyecto académico DSY1104">
+  <title>Inicio | Gas El Volcán</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="">
+<header class="cabecera">
+  <div class="contenedor barra-superior">
+    <a class="marca" href="index.html" aria-label="Ir al inicio">
+      <img src="assets/logo.svg" alt="Gas El Volcán">
+    </a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav-principal" aria-label="Navegación principal">
+      <ul><li><a class="activo" href="index.html">Inicio</a></li>
+<li><a class="" href="productos.html">Productos</a></li>
+<li><a class="" href="seguimiento.html">Mi pedido</a></li>
+<li><a class="" href="nosotros.html">Nosotros</a></li>
+<li><a class="" href="blog.html">Blog</a></li>
+<li><a class="" href="contacto.html">Contacto</a></li></ul>
+    </nav>
+    <div class="acciones-header">
+      <a class="enlace-login" href="login.html">Iniciar sesión</a>
+      <button id="btn-carrito" class="btn-carrito">Carrito (<span id="contador-carrito">0</span>)</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="contenedor hero-grid">
+    <div>
+      <span class="etiqueta">Despacho a domicilio en Chillán y comunas cercanas</span>
+      <h1>Tu gas, más simple y con seguimiento.</h1>
+      <p>Solicita cilindros y accesorios, revisa el estado de tu pedido y recibe información de despacho sin tener que llamar por teléfono.</p>
+      <div class="grupo-botones">
+        <a class="boton" href="productos.html">Ver productos</a>
+        <a class="boton boton-claro" href="seguimiento.html">Consultar pedido</a>
+      </div>
+      <div class="datos-hero">
+        <span><strong>80–120</strong> pedidos diarios</span>
+        <span><strong>3</strong> repartidores</span>
+        <span><strong>1998</strong> desde</span>
+      </div>
+    </div>
+    <img class="hero-imagen" src="assets/hero.svg" alt="Camión de reparto y cilindro de gas">
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor">
+    <div class="titulo-seccion">
+      <span class="etiqueta">Catálogo</span>
+      <h2>Productos destacados</h2>
+      <p>Precios residenciales del catálogo entregado para el caso.</p>
+    </div>
+    <div id="productos-destacados" class="grilla-productos"></div>
+    <p class="centrado"><a class="boton" href="productos.html">Ver catálogo completo</a></p>
+  </div>
+</section>
+
+<section class="seccion seccion-suave">
+  <div class="contenedor">
+    <div class="titulo-seccion">
+      <span class="etiqueta">Cobertura</span>
+      <h2>Zonas de despacho</h2>
+      <p>Horarios y tiempos estimados según el catálogo del proyecto.</p>
+    </div>
+    <div class="tabla-responsive">
+      <table>
+        <thead><tr><th>Zona</th><th>Comunas cubiertas</th><th>Días</th><th>Horario</th><th>Tiempo estimado</th></tr></thead>
+        <tbody>
+          <tr><td>Zona Centro</td><td>Chillán (centro, norte y sur)</td><td>Lunes a Sábado</td><td>08:00 – 20:00</td><td>1 – 3 horas</td></tr>
+          <tr><td>Zona Oriente</td><td>Chillán oriente y Chillán Viejo</td><td>Lunes a Viernes</td><td>08:00 – 18:00</td><td>2 – 4 horas</td></tr>
+          <tr><td>Zona Rural</td><td>El Carmen, Pinto y San Ignacio</td><td>Martes y Jueves</td><td>08:00 – 16:00</td><td>3 – 6 horas</td></tr>
+          <tr><td>Zona Sur</td><td>Bulnes y Quillón</td><td>Miércoles</td><td>08:00 – 16:00</td><td>4 – 6 horas</td></tr>
+          <tr><td>Zona Comercial</td><td>Parques industriales y locales comerciales</td><td>Lunes a Viernes</td><td>07:00 – 17:00</td><td>Según agenda</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor grilla-beneficios">
+    <article class="beneficio"><span>1</span><h3>Haz tu pedido</h3><p>Selecciona el producto y agrega tu dirección de entrega.</p></article>
+    <article class="beneficio"><span>2</span><h3>Asignación</h3><p>La operadora asigna el pedido a un repartidor disponible.</p></article>
+    <article class="beneficio"><span>3</span><h3>Seguimiento</h3><p>Consulta si está pendiente, asignado, en camino o entregado.</p></article>
+  </div>
+</section>
+
+<section class="seccion seccion-oscura">
+  <div class="contenedor seguridad-grid">
+    <div>
+      <span class="etiqueta etiqueta-clara">Seguridad</span>
+      <h2>Uso responsable del gas licuado</h2>
+      <p>Incluimos un video embebido para cumplir con los elementos multimedia solicitados en la evaluación.</p>
+    </div>
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/7VKyTZZgxaw" title="Video sobre seguridad de cilindros de gas licuado" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+<aside id="panel-carrito" class="panel-carrito oculto" aria-label="Carrito de compras">
+  <div class="panel-cabecera">
+    <h2>Mi carrito</h2>
+    <button id="cerrar-carrito" class="btn-cerrar" aria-label="Cerrar carrito">×</button>
+  </div>
+  <div id="lista-carrito"></div>
+  <div class="resumen-carrito">
+    <strong>Total: $<span id="total-carrito">0</span></strong>
+    <button id="vaciar-carrito" class="boton boton-peligro">Vaciar carrito</button>
+    <a class="boton boton-ancho" href="seguimiento.html">Continuar con pedido</a>
+  </div>
+</aside>
+<footer class="pie">
+  <div class="contenedor pie-grid">
+    <div>
+      <strong>Distribuidora de Gas El Volcán</strong>
+      <p>Chillán, Región de Ñuble</p>
+    </div>
+    <div>
+      <strong>Equipo DSY1104</strong>
+      <p>Sebastián Sellao · Carlos Salazar · Enzo Muñoz</p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
