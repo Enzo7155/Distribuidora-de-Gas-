@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Distribuidora de Gas El Volcán - Proyecto académico DSY1104">
+  <title>Seguimiento de pedidos | Gas El Volcán</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="">
+<header class="cabecera">
+  <div class="contenedor barra-superior">
+    <a class="marca" href="index.html" aria-label="Ir al inicio">
+      <img src="assets/logo.svg" alt="Gas El Volcán">
+    </a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav-principal" aria-label="Navegación principal">
+      <ul><li><a class="" href="index.html">Inicio</a></li>
+<li><a class="" href="productos.html">Productos</a></li>
+<li><a class="" href="seguimiento.html">Mi pedido</a></li>
+<li><a class="" href="nosotros.html">Nosotros</a></li>
+<li><a class="activo" href="blog.html">Blog</a></li>
+<li><a class="" href="contacto.html">Contacto</a></li></ul>
+    </nav>
+    <div class="acciones-header">
+      <a class="enlace-login" href="login.html">Iniciar sesión</a>
+      <button id="btn-carrito" class="btn-carrito">Carrito (<span id="contador-carrito">0</span>)</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cabecera-pagina"><div class="contenedor"><a class="volver" href="blog.html">← Volver al blog</a><h1>Cómo funciona el seguimiento de pedidos</h1></div></section>
+<article class="seccion"><div class="contenedor articulo"><img src="assets/hero.svg" alt="Reparto de gas"><p>El sistema propuesto reemplaza la dependencia de llamadas y listas en papel por un flujo digital. Una vez registrado el pedido, la operadora puede visualizarlo y asignarlo a un repartidor.</p><h2>Estados del pedido</h2><ol><li><strong>Pendiente:</strong> la solicitud fue registrada.</li><li><strong>Asignado:</strong> la operadora seleccionó un repartidor.</li><li><strong>En camino:</strong> el repartidor inició el despacho.</li><li><strong>Entregado:</strong> el pedido fue completado y su pago queda registrado.</li></ol><p>El cliente puede consultar el estado actualizado y visualizar una representación del seguimiento en la vista “Mi pedido”.</p></div></article>
+
+</main>
+<aside id="panel-carrito" class="panel-carrito oculto" aria-label="Carrito de compras">
+  <div class="panel-cabecera">
+    <h2>Mi carrito</h2>
+    <button id="cerrar-carrito" class="btn-cerrar" aria-label="Cerrar carrito">×</button>
+  </div>
+  <div id="lista-carrito"></div>
+  <div class="resumen-carrito">
+    <strong>Total: $<span id="total-carrito">0</span></strong>
+    <button id="vaciar-carrito" class="boton boton-peligro">Vaciar carrito</button>
+    <a class="boton boton-ancho" href="seguimiento.html">Continuar con pedido</a>
+  </div>
+</aside>
+<footer class="pie">
+  <div class="contenedor pie-grid">
+    <div>
+      <strong>Distribuidora de Gas El Volcán</strong>
+      <p>Chillán, Región de Ñuble</p>
+    </div>
+    <div>
+      <strong>Equipo DSY1104</strong>
+      <p>Sebastián Sellao · Carlos Salazar · Enzo Muñoz</p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120">
+<rect width="480" height="120" rx="18" fill="#fff"/>
+<path d="M54 20c20 22 28 37 28 52a28 28 0 1 1-56 0c0-14 9-31 28-52Z" fill="#f36c21"/>
+<path d="M54 45c11 12 16 21 16 30a16 16 0 1 1-32 0c0-8 5-18 16-30Z" fill="#ffd36a"/>
+<text x="100" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#17324d">Gas El Volcán</text>
+<text x="101" y="84" font-family="Arial, sans-serif" font-size="16" fill="#5c6b78">Distribución de gas licuado a domicilio</text>
+</svg>
