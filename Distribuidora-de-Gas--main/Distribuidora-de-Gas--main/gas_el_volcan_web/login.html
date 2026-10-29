@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Distribuidora de Gas El Volcán - Proyecto académico DSY1104">
+  <title>Inicio de sesión | Gas El Volcán</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="">
+<header class="cabecera">
+  <div class="contenedor barra-superior">
+    <a class="marca" href="index.html" aria-label="Ir al inicio">
+      <img src="assets/logo.svg" alt="Gas El Volcán">
+    </a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav-principal" aria-label="Navegación principal">
+      <ul><li><a class="" href="index.html">Inicio</a></li>
+<li><a class="" href="productos.html">Productos</a></li>
+<li><a class="" href="seguimiento.html">Mi pedido</a></li>
+<li><a class="" href="nosotros.html">Nosotros</a></li>
+<li><a class="" href="blog.html">Blog</a></li>
+<li><a class="" href="contacto.html">Contacto</a></li></ul>
+    </nav>
+    <div class="acciones-header">
+      <a class="enlace-login" href="login.html">Iniciar sesión</a>
+      <button id="btn-carrito" class="btn-carrito">Carrito (<span id="contador-carrito">0</span>)</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cabecera-pagina">
+  <div class="contenedor"><span class="etiqueta">Acceso</span><h1>Inicio de sesión</h1><p>Ingresa con tu correo y contraseña.</p></div>
+</section>
+<section class="seccion">
+  <div class="contenedor formulario-contenedor">
+    <form id="form-login" class="tarjeta-formulario" novalidate>
+      <div class="campo">
+        <label for="correo-login">Correo electrónico *</label>
+        <input type="email" id="correo-login" maxlength="100" autocomplete="email" placeholder="nombre@duoc.cl">
+        <small id="error-correo-login" class="error"></small>
+      </div>
+      <div class="campo">
+        <label for="password-login">Contraseña *</label>
+        <input type="password" id="password-login" maxlength="10" autocomplete="current-password" placeholder="Entre 4 y 10 caracteres">
+        <small id="error-password-login" class="error"></small>
+      </div>
+      <button type="submit" class="boton boton-ancho">Ingresar</button>
+      <p id="mensaje-login" class="mensaje"></p>
+      <p class="ayuda">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>.</p><p class="ayuda">Para la demostración académica: <a href="admin.html">abrir panel administrador</a>.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<aside id="panel-carrito" class="panel-carrito oculto" aria-label="Carrito de compras">
+  <div class="panel-cabecera">
+    <h2>Mi carrito</h2>
+    <button id="cerrar-carrito" class="btn-cerrar" aria-label="Cerrar carrito">×</button>
+  </div>
+  <div id="lista-carrito"></div>
+  <div class="resumen-carrito">
+    <strong>Total: $<span id="total-carrito">0</span></strong>
+    <button id="vaciar-carrito" class="boton boton-peligro">Vaciar carrito</button>
+    <a class="boton boton-ancho" href="seguimiento.html">Continuar con pedido</a>
+  </div>
+</aside>
+<footer class="pie">
+  <div class="contenedor pie-grid">
+    <div>
+      <strong>Distribuidora de Gas El Volcán</strong>
+      <p>Chillán, Región de Ñuble</p>
+    </div>
+    <div>
+      <strong>Equipo DSY1104</strong>
+      <p>Sebastián Sellao · Carlos Salazar · Enzo Muñoz</p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
