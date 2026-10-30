@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import Header from './Header.jsx'
+import Header from './organisms/Header.jsx'
 import { renderConProveedores } from '../test/utils.jsx'
 
 describe('Header', () => {

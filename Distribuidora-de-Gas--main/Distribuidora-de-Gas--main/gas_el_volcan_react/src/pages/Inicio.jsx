@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import TarjetaProducto from '../components/TarjetaProducto.jsx'
+import TarjetaProducto from '../components/molecules/TarjetaProducto.jsx'
 import { asset } from '../lib/assets.js'
 import { productos } from '../data/productos.js'
 

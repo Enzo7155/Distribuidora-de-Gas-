@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
-import Header from './Header.jsx'
+import Header from './organisms/Header.jsx'
 import PanelCarrito from './PanelCarrito.jsx'
-import TarjetaProducto from './TarjetaProducto.jsx'
+import TarjetaProducto from './molecules/TarjetaProducto.jsx'
 import { renderConProveedores } from '../test/utils.jsx'
 import { productos } from '../data/productos.js'
 

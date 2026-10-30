@@ -1,4 +1,3 @@
-
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --azul:#17324d;--azul2:#0f2437;--naranjo:#f36c21;--naranjo2:#d8540d;
@@ -186,4 +185,1067 @@ linear-gradient(60deg,transparent 24%,rgba(23,50,77,.08) 25%,rgba(23,50,77,.08) 
   .menu-admin{grid-template-columns:1fr 1fr}
   .barra-filtros{align-items:stretch;flex-direction:column}
   .detalle-meta{grid-template-columns:1fr}
+}
+
+
+.barra-filtros {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #e1e9ef;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.barra-filtros label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #19344d;
+}
+
+.barra-filtros select {
+  flex: 1;
+  min-width: 0;
+  max-width: 340px;
+  padding: 12px 14px;
+  border: 1px solid #ccd6df;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #19344d;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.barra-filtros select:focus {
+  outline: 2px solid #f36c21;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .barra-filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .barra-filtros select {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* =============================================
+   GAS EL VOLCÁN - MODERNIZACIÓN VISUAL EP2
+   React + Atomic Design
+   ============================================= */
+
+:root {
+  --azul: #142d45;
+  --azul2: #0a1c2d;
+  --naranjo: #ed6427;
+  --naranjo2: #cf4a13;
+  --crema: #fff0e5;
+  --fondo: #f5f7fa;
+  --texto: #1a3043;
+  --muted: #627589;
+  --borde: #e1e8ef;
+  --blanco: #fff;
+  --verde: #21805b;
+  --rojo: #b53b45;
+  --radio: 18px;
+  --sombra: 0 10px 32px rgba(15, 41, 64, .075);
+  --sombra-hover: 0 20px 48px rgba(15, 41, 64, .15);
+}
+
+/* ESTILOS GENERALES */
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: #fff;
+  color: var(--texto);
+  font-family: Inter, "Segoe UI", system-ui, Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.contenedor {
+  width: min(1200px, calc(100% - 48px));
+}
+
+:focus-visible {
+  outline: 3px solid var(--naranjo);
+  outline-offset: 3px;
+}
+
+a, button, input, select, textarea {
+  transition:
+    background-color .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+
+.cabecera {
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--borde);
+  box-shadow: 0 3px 24px rgba(18, 42, 65, .045);
+  backdrop-filter: blur(16px);
+}
+
+.barra-superior {
+  min-height: 86px;
+  gap: 18px;
+}
+
+.marca img {
+  width: 208px;
+}
+
+nav ul {
+  gap: 2px;
+}
+
+nav a {
+  border-radius: 11px;
+  padding: 10px 12px;
+  font-size: .9rem;
+}
+
+nav a:hover,
+nav a.activo {
+  background: #fff0e6;
+  color: #ba4514;
+}
+
+.enlace-login {
+  font-size: .9rem;
+}
+
+.enlace-login:hover {
+  color: var(--naranjo2);
+}
+
+.btn-carrito {
+  background: var(--azul);
+  border-radius: 12px;
+  min-height: 44px;
+  padding: 10px 16px;
+  box-shadow: 0 5px 15px rgba(20, 45, 69, .14);
+}
+
+.btn-carrito:hover {
+  background: #244c6c;
+  transform: translateY(-2px);
+}
+
+.btn-menu {
+  min-width: 44px;
+  min-height: 42px;
+  border-radius: 10px;
+}
+
+/* PORTADA PRINCIPAL */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 96px;
+  background:
+    radial-gradient(
+      circle at 82% 16%,
+      rgba(253, 168, 116, .24),
+      transparent 30%
+    ),
+    linear-gradient(120deg, #fff 18%, #fff7f0 100%);
+}
+
+.hero-grid {
+  grid-template-columns: 1.08fr .92fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero h1 {
+  color: var(--azul);
+  font-size: clamp(3rem, 5vw, 4.9rem);
+  letter-spacing: -.055em;
+  line-height: 1.06;
+  margin: 18px 0 25px;
+  text-wrap: balance;
+}
+
+.hero p {
+  color: #5e7185;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  max-width: 590px;
+}
+
+.hero-imagen {
+  width: 100%;
+  border-radius: 30px;
+  border: 9px solid rgba(255, 255, 255, .82);
+  box-shadow: 0 30px 65px rgba(24, 48, 71, .16);
+  transform: rotate(1.4deg);
+}
+
+.etiqueta {
+  background: #ffe8d7;
+  color: #aa4316;
+  border: 1px solid #ffddc7;
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+}
+
+.etiqueta-clara {
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, .22);
+}
+
+/* BOTONES */
+
+.grupo-botones {
+  margin-top: 32px;
+  gap: 12px;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  border-radius: 11px;
+  background: var(--naranjo);
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: .95rem;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: 0 8px 18px rgba(237, 100, 39, .16);
+}
+
+.boton:hover {
+  background: var(--naranjo2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 23px rgba(237, 100, 39, .24);
+}
+
+.boton-claro,
+.acciones-producto .boton-sec {
+  background: #fff;
+  color: var(--azul);
+  border: 1px solid #d7e1e9;
+  box-shadow: 0 5px 15px rgba(20, 45, 69, .04);
+}
+
+.boton-claro:hover,
+.acciones-producto .boton-sec:hover {
+  background: #f0f5f9;
+  color: var(--azul);
+}
+
+.boton-pequeno {
+  border-radius: 9px;
+  padding: 9px 12px;
+}
+
+/* ESTADÍSTICAS DE PORTADA */
+
+.datos-hero {
+  gap: 32px;
+  margin-top: 42px;
+  padding-top: 26px;
+  border-color: #e5e0dd;
+}
+
+.datos-hero span {
+  gap: 1px;
+  color: #738396;
+  font-size: .85rem;
+}
+
+.datos-hero strong {
+  color: var(--azul);
+  font-size: 1.9rem;
+  letter-spacing: -.04em;
+}
+
+/* SECCIONES */
+
+.seccion {
+  padding: 86px 0;
+}
+
+.seccion-suave {
+  background: #f5f8fb;
+}
+
+.seccion-oscura {
+  background: linear-gradient(125deg, #0e253b, #1a415e);
+  color: #fff;
+}
+
+.seccion-oscura h2 {
+  color: #fff;
+}
+
+.titulo-seccion {
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+
+.titulo-seccion h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  margin: 12px 0 8px;
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.grilla-productos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background: #fff;
+  border: 1px solid #e3ebf2;
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.producto:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--sombra-hover);
+  border-color: #cad8e4;
+}
+
+.producto img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  padding: 16px;
+  background: linear-gradient(140deg, #f2f7fb, #fff1e7);
+}
+
+.producto-contenido {
+  padding: 21px 19px 20px;
+  gap: 9px;
+}
+
+.producto .categoria {
+  color: #a44b28;
+  font-size: .78rem;
+  font-weight: 750;
+}
+
+.producto h3 {
+  color: var(--azul);
+  font-size: 1.08rem;
+  line-height: 1.32;
+  letter-spacing: -.012em;
+}
+
+.producto .descripcion {
+  font-size: .88rem;
+  color: #637487;
+  line-height: 1.65;
+}
+
+.producto .precio {
+  margin-top: 6px;
+  font-size: 1.46rem;
+  color: var(--azul);
+  letter-spacing: -.035em;
+}
+
+.stock {
+  color: var(--verde);
+  font-size: .81rem;
+}
+
+.acciones-producto {
+  display: flex;
+  gap: 9px;
+  margin-top: 11px;
+}
+
+.acciones-producto .boton {
+  flex: 1;
+  min-height: 42px;
+  padding: 9px 10px;
+  font-size: .88rem;
+}
+
+/* FILTRO DE CATEGORÍAS */
+
+.barra-filtros {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  padding: 19px 23px;
+  margin-bottom: 28px;
+  border: 1px solid var(--borde);
+  border-radius: 17px;
+  box-shadow: var(--sombra);
+}
+
+.barra-filtros label {
+  color: var(--azul);
+  font-size: .94rem;
+  font-weight: 800;
+}
+
+.barra-filtros select {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  max-width: 360px;
+}
+
+/* CABECERAS INTERIORES */
+
+.cabecera-pagina {
+  padding: 72px 0 56px;
+  background: linear-gradient(120deg, #f2f7fb, #fff5ee);
+  border-color: #e8edf2;
+}
+
+.cabecera-pagina h1 {
+  font-size: clamp(2.35rem, 4.3vw, 3.8rem);
+  letter-spacing: -.05em;
+  margin: 12px 0 10px;
+}
+
+.cabecera-pagina p {
+  max-width: 700px;
+  font-size: 1.03rem;
+}
+
+/* FORMULARIOS */
+
+.formulario-contenedor {
+  max-width: 690px;
+}
+
+.formulario-ancho {
+  max-width: 930px;
+}
+
+.tarjeta-formulario,
+.tarjeta-info {
+  background: #fff;
+  border: 1px solid #e3ebf2;
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  color: var(--azul);
+  font-size: .91rem;
+  margin-bottom: 7px;
+}
+
+input, select, textarea {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 14px;
+  border: 1px solid #cbd7e1;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--texto);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: var(--naranjo);
+  box-shadow: 0 0 0 4px rgba(237, 100, 39, .13);
+}
+
+textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.error {
+  color: var(--rojo);
+  font-size: .84rem;
+}
+
+.mensaje.ok {
+  background: #eaf8ef;
+  border-radius: 10px;
+  padding: 11px 14px;
+}
+
+.mensaje.mal {
+  background: #fff0f0;
+  border-radius: 10px;
+  padding: 11px 14px;
+}
+
+/* TABLAS */
+
+.tabla-responsive {
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+}
+
+th {
+  background: #eff4f8;
+  color: var(--azul);
+  font-weight: 800;
+}
+
+th, td {
+  padding: 15px 17px;
+}
+
+tbody tr:hover td {
+  background: #f8fbfd;
+}
+
+/* BLOG */
+
+.tarjeta-blog {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.tarjeta-blog img {
+  height: 260px;
+  padding: 20px;
+  object-fit: contain;
+  background: linear-gradient(140deg, #f2f7fb, #fff1e7);
+}
+
+.tarjeta-blog > div {
+  padding: 26px;
+}
+
+/* DETALLE DE PRODUCTO */
+
+.detalle-producto {
+  gap: 50px;
+}
+
+.detalle-producto > img {
+  background: #f4f8fb;
+  border-radius: 24px;
+  padding: 18px;
+}
+
+.detalle-producto .precio-grande {
+  color: var(--naranjo2);
+  font-size: 2.25rem;
+}
+
+.detalle-meta div {
+  background: #f6f9fb;
+  border: 1px solid var(--borde);
+  border-radius: 13px;
+  padding: 15px;
+}
+
+/* CARRITO */
+
+.panel-carrito {
+  width: min(465px, 100%);
+  padding: 28px;
+  box-shadow: -18px 0 60px rgba(10, 28, 45, .23);
+}
+
+.panel-cabecera {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--borde);
+}
+
+.btn-cerrar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f0f4f7;
+}
+
+.item-carrito {
+  padding: 16px 0;
+}
+
+/* SEGUIMIENTO */
+
+.mapa-simulado {
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+}
+
+.paso {
+  padding: 11px 0;
+}
+
+.paso span {
+  width: 36px;
+  height: 36px;
+}
+
+/* PANEL ADMINISTRATIVO */
+
+.admin-layout {
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 26px;
+}
+
+.menu-admin {
+  position: sticky;
+  top: 108px;
+  margin-left: 0;
+  border-radius: 17px;
+  box-shadow: var(--sombra);
+}
+
+.menu-admin a {
+  padding: 14px 17px;
+}
+
+.stats {
+  gap: 18px;
+}
+
+.stats article {
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--sombra);
+}
+
+.stats strong {
+  font-size: 2.35rem;
+  letter-spacing: -.04em;
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+  background: var(--azul2);
+  padding: 48px 0;
+}
+
+.pie p {
+  color: #c6d5e1;
+}
+
+/* RESPONSIVIDAD - TABLET */
+
+@media (max-width: 1120px) {
+  .barra-superior {
+    gap: 11px;
+  }
+
+  .marca img {
+    width: 180px;
+  }
+
+  nav a {
+    padding: 9px 8px;
+    font-size: .85rem;
+  }
+
+  .hero-grid {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 980px) {
+  .marca img {
+    width: 205px;
+  }
+
+  .hero-grid,
+  .detalle-producto,
+  .seguimiento-grid,
+  .nosotros-grid,
+  .seguridad-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-imagen {
+    max-height: 390px;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .grilla-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .menu-admin {
+    position: static;
+  }
+}
+
+/* RESPONSIVIDAD - CELULAR */
+
+@media (max-width: 640px) {
+  .contenedor {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    padding: 58px 0 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 11vw, 3.5rem);
+    letter-spacing: -.05em;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-imagen {
+    max-height: 320px;
+  }
+
+  .seccion {
+    padding: 58px 0;
+  }
+
+  .cabecera-pagina {
+    padding: 49px 0 42px;
+  }
+
+  .grilla-productos,
+  .grilla-beneficios,
+  .grilla-blog,
+  .stats,
+  .pie-grid,
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .producto img {
+    height: 220px;
+  }
+
+  .barra-filtros {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .barra-filtros select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .tarjeta-formulario,
+  .tarjeta-info {
+    padding: 22px 18px;
+  }
+
+  .datos-hero {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .menu-admin {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detalle-meta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panel-carrito {
+    padding: 20px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ============================================================
+   GAS EL VOLCÁN · AJUSTES VISUALES FINALES · EP2
+   La base original se conserva íntegra arriba.
+   Esta sección refina tamaños, espacios, tarjetas y responsive.
+   ============================================================ */
+
+:root {
+  --azul: #142d45;
+  --azul2: #0a2033;
+  --naranjo: #ed6427;
+  --naranjo2: #cf4a13;
+  --crema: #fff0e5;
+  --fondo: #f5f8fb;
+  --texto: #1a3043;
+  --muted: #627589;
+  --borde: #e1e8ef;
+  --verde: #21805b;
+  --rojo: #b53b45;
+}
+
+/* Cabecera: marca más legible y enlaces mejor equilibrados */
+.barra-superior {
+  gap: 16px;
+}
+.marca {
+  flex-shrink: 0;
+}
+.marca img {
+  width: 236px;
+  height: auto;
+}
+nav a {
+  white-space: nowrap;
+}
+.btn-carrito {
+  min-height: 45px;
+}
+
+/* Portada: reducir espacio sobrante y alinear mejor la ilustración */
+.hero {
+  padding: 72px 0 80px;
+}
+.hero-grid {
+  gap: 52px;
+}
+.hero h1 {
+  font-size: clamp(2.75rem, 4.7vw, 4.65rem);
+}
+.hero-imagen {
+  transform: none;
+  border: 5px solid rgba(255, 255, 255, .92);
+  border-radius: 26px;
+  box-shadow: 0 22px 55px rgba(18, 42, 65, .14);
+}
+.datos-hero span {
+  line-height: 1.45;
+}
+.datos-hero strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Ritmo visual compartido entre las secciones */
+.seccion {
+  padding: 76px 0;
+}
+.titulo-seccion {
+  margin-bottom: 32px;
+}
+.cabecera-pagina {
+  padding: 60px 0 48px;
+}
+
+/* Tarjetas: eliminar el cuadro interior producido por el padding de imagen */
+.grilla-productos {
+  gap: 22px;
+}
+.producto {
+  border-radius: 19px;
+}
+.producto img {
+  display: block;
+  height: 205px;
+  padding: 0;
+  object-fit: cover;
+  background: #fff1e6;
+}
+.producto-contenido {
+  padding: 20px 19px 21px;
+}
+.producto h3 {
+  min-height: 1.32em;
+}
+.acciones-producto {
+  margin-top: 14px;
+}
+.acciones-producto .boton {
+  min-width: 0;
+}
+
+/* Filtro: claro, compacto y uniforme con las tarjetas */
+.barra-filtros {
+  min-height: 84px;
+  margin-bottom: 26px;
+}
+.barra-filtros select {
+  min-height: 47px;
+}
+
+/* Botones semánticos: preservar variantes de acción y peligro */
+.boton-peligro {
+  background: var(--rojo);
+  color: #fff;
+}
+.boton-peligro:hover {
+  background: #952a35;
+  color: #fff;
+}
+.boton-ancho {
+  width: 100%;
+  text-align: center;
+}
+.boton-claro:hover {
+  color: var(--azul);
+}
+
+/* Blog: evitar un marco extra alrededor de las ilustraciones SVG */
+.tarjeta-blog img {
+  display: block;
+  width: 100%;
+  height: 245px;
+  padding: 0;
+  object-fit: contain;
+  background: #fff3e9;
+}
+.tarjeta-blog > div {
+  padding: 25px;
+}
+
+/* Formularios, tablas y paneles más equilibrados */
+.tarjeta-formulario,
+.tarjeta-info {
+  box-shadow: 0 13px 32px rgba(15, 41, 64, .07);
+}
+.campo label {
+  display: block;
+}
+.tabla-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.panel-carrito {
+  border-radius: 22px 0 0 22px;
+}
+.menu-admin {
+  overflow: hidden;
+}
+
+/* Responsive: colapsar el menú antes de que se comprima demasiado */
+@media (max-width: 1120px) {
+  .barra-superior {
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .marca img {
+    width: 210px;
+  }
+  .btn-menu {
+    display: block;
+    margin-left: auto;
+  }
+  nav {
+    order: 4;
+    width: 100%;
+    display: none;
+    margin-left: 0;
+  }
+  nav.abierto {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    padding: 8px 0;
+  }
+  nav a {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    padding: 58px 0 64px;
+  }
+  .hero-grid {
+    gap: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
+  }
+  .seccion {
+    padding: 66px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .marca img {
+    width: 200px;
+  }
+  .hero {
+    padding: 46px 0 54px;
+  }
+  .hero h1 {
+    font-size: clamp(2.35rem, 10.5vw, 3.45rem);
+  }
+  .seccion {
+    padding: 54px 0;
+  }
+  .cabecera-pagina {
+    padding: 46px 0 40px;
+  }
+  .grilla-productos {
+    gap: 18px;
+  }
+  .producto img {
+    height: 230px;
+  }
+  .barra-filtros {
+    min-height: 0;
+  }
+  .barra-filtros select {
+    width: 100%;
+    max-width: none;
+  }
+  .tarjeta-blog img {
+    height: 215px;
+  }
+  .panel-carrito {
+    border-radius: 0;
+  }
 }
